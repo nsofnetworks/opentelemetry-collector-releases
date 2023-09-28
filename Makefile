@@ -8,7 +8,7 @@ OTELCOL_BUILDER ?= ${OTELCOL_BUILDER_DIR}/ocb
 DISTRIBUTIONS ?= "otelcol,otelcol-contrib"
 
 ci: check build
-check: ensure-goreleaser-up-to-date
+check:
 
 build: go ocb
 	@./scripts/build.sh -d "${DISTRIBUTIONS}" -b ${OTELCOL_BUILDER} -g ${GO}
